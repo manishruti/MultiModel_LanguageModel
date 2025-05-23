@@ -1,0 +1,7 @@
+transformers
+sentence_transformers
+torchvision
+torch
+pillow
+gensim
+git+https://github.com/openai/CLIP.git
