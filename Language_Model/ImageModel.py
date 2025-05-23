@@ -58,30 +58,6 @@ def score_description(true_caption, user_caption):
     score = util.cos_sim(emb1, emb2)
     return float(score)
 
-# Example usage
-# image_path = "Input/Image/nature.jpg"  # Replace with your image path
-# generated_caption = generate_caption(image_path)
-# print("Generated Caption:", generated_caption)
-
-# # Simulate user input
-# user_descriptions = ["a boat is on the beach at sunset",
-#     "birds are flying in the sky",
-#     "boats on water and birds in the sky",
-#     "a scenic beach sunset with birds and boats"
-#     ]
-
-# best_score = 0
-# best_match = ""
-
-# for user_caption in user_descriptions:
-#     score = score_description(generated_caption, user_caption)
-#     if score > best_score:
-#         best_score = score
-#         best_match = user_caption
-
-# #score = score_description(generated_caption, user_description)
-# print("Description Score:", round(score, 2))  # Score between 0 and 1
-
 if __name__ == "__main__":
 
     results = []
@@ -114,29 +90,3 @@ if __name__ == "__main__":
         print(f"Model Caption : {model_caption}")
         print(f"Your Caption  : {user_input}")
         print(f"Similarity Score: {round(score, 2)}")
-
-    # User inputs
-    #image_path = "Input/Image/nature.jpg"  # Replace with your image path
-    
-    # Validate image path
-    # if not os.path.exists(image_path):
-    #     print(f"Image path '{image_path}' does not exist.")
-    #     exit()
-
-    # img = mpimg.imread(image_path)
-    # plt.imshow(img)
-    # plt.axis('off')
-    # plt.title("Close this window to continue")
-    # plt.show()
-
-    # input("\nPress Enter after viewing the image...")
-
-    # show_image_auto_close(image_path, delay=10)  # Image auto-closes in 5 seconds
-    # user_input = input("Enter your description of the image: ").strip()
-
-    # # Generate and score
-    # generated_caption = generate_caption(image_path)
-    # print(f"\n Generated Caption: {generated_caption}")
-
-    # score = score_description(generated_caption, user_input)
-    # print(f"Description Score (0 to 1): {round(score, 2)}")
